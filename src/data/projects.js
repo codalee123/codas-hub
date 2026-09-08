@@ -3,6 +3,7 @@ import EverstreamImage from "../assets/images/Everstream-image.jpeg"
 import MusaisImage from "../assets/images/Musais-image.jpeg"
 import FashionImage from "../assets/images/Fashion-Image.jpeg"
 import PinwheelImage from "../assets/images/Pinwheel-image.jpeg"
+import YoutubeImage from "../assets/images/Youtube-image.jpeg"
 
 const projects = [
   {
@@ -58,6 +59,17 @@ const projects = [
     technologies: ["HTML", "CSS"],
     liveUrl: "https://pinwheel-clone.vercel.app/",
     githubUrl: "https://github.com/codalee123/pinwheel-clone",
+  },
+
+  {
+    id: 6,
+    title: "Youtube Clone",
+    description:
+      "A website clone built to test and strengthen my front-end development skills using HTML, CSS, and JavaScript. This project focuses on recreating a modern web interface while improving my understanding of layout design, styling, responsiveness, and JavaScript functionality.",
+    image:YoutubeImage,
+    technologies: ["HTML", "CSS"],
+    liveUrl: "https://youtube-clone-ochre-delta.vercel.app/",
+    githubUrl: "https://github.com/codalee123/Youtube-clone",
   },
 ];
 
