@@ -157,7 +157,7 @@ function Footer() {
             Back to top
             <ArrowUp
               size={16}
-              className="transition-transform group-hover:-translate-y-1"
+              className="hover:-translate-y-1"
             />
           </button>
         </div>
