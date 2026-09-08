@@ -5,6 +5,14 @@ import Twitter from "../assets/icons/twitter-logo.png"
 import { Link } from "react-router";
 import Container from "./Container";
 
+
+const handleBackToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-white">
@@ -141,16 +149,17 @@ function Footer() {
             reserved.
           </p>
 
-          <a
-            href="#top"
-            className="group inline-flex w-fit items-center gap-2 text-xs font-medium text-neutral-500 transition-colors hover:text-black"
+          <button
+            type="button"
+            onClick={handleBackToTop}
+            className="group inline-flex items-center gap-2 text-sm font-medium text-neutral-600 transition-colors hover:text-black"
           >
             Back to top
             <ArrowUp
-              size={15}
-              className="transition-transform group-hover:-translate-y-0.5"
+              size={16}
+              className="transition-transform group-hover:-translate-y-1"
             />
-          </a>
+          </button>
         </div>
       </Container>
     </footer>
