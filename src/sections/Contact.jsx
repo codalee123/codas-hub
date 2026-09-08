@@ -1,7 +1,41 @@
+import { useState } from "react";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Container from "../components/Container";
 
 function Contact() {
+
+        const [isSubmitting, setIsSubmitting] = useState(false);
+        const [status, setStatus] = useState("");
+
+        const handleSubmit = (event) => {
+          event.preventDefault();
+
+          const form = event.target;
+
+          // Check all required fields
+          if (!form.checkValidity()) {
+            setStatus("error");
+
+            setTimeout(() => {
+              setStatus("");
+            }, 4000);
+
+            return;
+          }
+
+          setIsSubmitting(true);
+          setStatus("");
+
+          setTimeout(() => {
+            setIsSubmitting(false);
+            setStatus("success");
+            form.reset();
+
+            setTimeout(() => {
+              setStatus("");
+            }, 4000);
+          }, 1500);
+        };
   return (
     <main className="bg-white">
       <section className="py-20 lg:py-28">
@@ -38,7 +72,7 @@ function Contact() {
                     </p>
 
                     <a
-                      href="mailto:your-email@example.com"
+                      href="mailto:olawunmibello1@gmail.com"
                       className="mt-1 block text-sm font-medium text-neutral-400 hover:underline"
                     >
                       olawunmibello1@gmail.com
@@ -86,7 +120,7 @@ function Contact() {
 
             {/* Right Side - Form */}
             <div className=" p-6 sm:p-8 lg:p-10">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 {/* Name */}
                 <div>
                   <label
@@ -100,6 +134,7 @@ function Contact() {
                     id="name"
                     type="text"
                     name="name"
+                    required
                     placeholder="Your name"
                     className="w-full border border-neutral-200 bg-white px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-neutral-400 focus:border-[grey] rounded-2xl"
                   />
@@ -117,6 +152,7 @@ function Contact() {
                   <input
                     id="email"
                     type="email"
+                    required
                     name="email"
                     placeholder="you@example.com"
                     className="w-full border border-neutral-200 bg-white px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-neutral-400 focus:border-[grey] rounded-2xl"
@@ -136,6 +172,7 @@ function Contact() {
                     id="subject"
                     type="text"
                     name="subject"
+                    required
                     placeholder="What is this about?"
                     className="w-full border border-neutral-200 bg-white px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-neutral-400 focus:border-[grey] rounded-2xl"
                   />
@@ -154,6 +191,7 @@ function Contact() {
                     id="message"
                     name="message"
                     rows="6"
+                    required
                     placeholder="Tell me about your project..."
                     className="w-full resize-none border border-neutral-200 bg-white px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-neutral-400 focus:border-[grey] rounded-[10px]"
                   />
@@ -162,9 +200,10 @@ function Contact() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group inline-flex w-full items-center justify-center gap-3 bg-black px-6 py-4 rounded-[10px] text-sm font-medium text-white transition hover:bg-neutral-800"
+                  disabled={isSubmitting}
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-[10px] bg-black px-6 py-4 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
 
                   <ArrowUpRight
                     size={18}
@@ -172,6 +211,20 @@ function Contact() {
                   />
                 </button>
               </form>
+
+              {/* Checking Status */}
+
+              {status === "error" && (
+                <p className="mt-5 text-sm font-medium text-red-600">
+                  Please fill in all required fields before sending your message.
+                </p>
+              )}
+
+              {status === "success" && (
+              <p className="mt-5 text-sm font-medium text-green-600">
+                Your message has been sent successfully. We’ll get back to you soon.
+              </p>
+            )}
             </div>
           </div>
         </Container>
