@@ -2,6 +2,8 @@ import JuneImage from "../assets/images/June-image.jpeg"
 import EverstreamImage from "../assets/images/Everstream-image.jpeg"
 import MusaisImage from "../assets/images/Musais-image.jpeg"
 import FashionImage from "../assets/images/Fashion-Image.jpeg"
+import PinwheelImage from "../assets/images/Pinwheel-image.jpeg"
+
 const projects = [
   {
     id: 1,
@@ -45,6 +47,17 @@ const projects = [
     technologies: ["HTML", "CSS", "Javascript"],
     liveUrl: "https://eedfasion-website.vercel.app",
     githubUrl: "https://github.com/codalee123/EEDFASION-WEBSITE",
+  },
+
+  {
+    id: 5,
+    title: "Pinwheel Website",
+    description:
+      "A website clone built to test and strengthen my front-end development skills using HTML, CSS, and JavaScript. This project focuses on recreating a modern web interface while improving my understanding of layout design, styling, responsiveness, and JavaScript functionality.",
+    image:PinwheelImage,
+    technologies: ["HTML", "CSS"],
+    liveUrl: "https://pinwheel-clone.vercel.app/",
+    githubUrl: "https://github.com/codalee123/pinwheel-clone",
   },
 ];
 
