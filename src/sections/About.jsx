@@ -18,7 +18,7 @@ function About() {
               <div className="mt-8 max-w-2xl space-y-4 text-base leading-6 text-neutral-600 sm:text-lg">
                 <p>
                   I’m Bello Sadam Oluwaseyi, a Front-End Developer and UI/UX
-                  Designer with two years of hands-on experience creating
+                  Designer with two years + of hands-on experience creating
                   intuitive, responsive, and visually engaging digital
                   experiences.
                 </p>
