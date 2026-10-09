@@ -4,6 +4,7 @@ import MusaisImage from "../assets/images/Musais-image.jpeg"
 import FashionImage from "../assets/images/Fashion-Image.jpeg"
 import PinwheelImage from "../assets/images/Pinwheel-image.jpeg"
 import YoutubeImage from "../assets/images/Youtube-image.jpeg"
+import OyinjewelryImage from "../assets/images/oyin-website.png"
 
 const projects = [
   {
@@ -70,6 +71,16 @@ const projects = [
     technologies: ["HTML", "CSS"],
     liveUrl: "https://youtube-clone-ochre-delta.vercel.app/",
     githubUrl: "https://github.com/codalee123/Youtube-clone",
+  },
+
+  {
+    id: 7,
+    title: "Oyinjewelries",
+    description:
+      "Oyinsjewelries is a responsive jewelry e-commerce website built with React, Tailwind CSS, and Vite. It allows customers to browse jewelry collections, filter products by category, manage their shopping cart, and place orders directly through WhatsApp.",
+    image:OyinjewelryImage,
+    technologies: ["React", "Tailwind CSS", "vite"],
+    liveUrl: "https://oyinsjewelries.vercel.app/",
   },
 ];
 
