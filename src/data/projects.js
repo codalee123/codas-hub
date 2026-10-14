@@ -7,8 +7,18 @@ import YoutubeImage from "../assets/images/Youtube-image.jpeg"
 import OyinjewelryImage from "../assets/images/oyin-website.png"
 
 const projects = [
-  {
+
+   {
     id: 1,
+    title: "Oyinsjewelries (E-commerce Website)",
+    description:
+      " Oyinsjewelries is a responsive jewellery e-commerce website developed using React, Vite, and Tailwind CSS, with Supabase powering the backend. The platform features product categorisation, shopping cart functionality, admin authentication, product management, image uploads, stock tracking, and WhatsApp checkout, enabling the client to manage products and connect with customers seamlessly..",
+    image:OyinjewelryImage,
+    technologies: ["React", "Tailwind CSS", "vite" ,"Supabase","Lucid React", "React Router"],
+    liveUrl: "https://oyinsjewelries.vercel.app/",
+  },
+  {
+    id: 2,
     title: "June Website (Team Work)",
     description:
       "June is a cloud-native platform that acts as the invisible CTO for Africa's businesses. It provides ready-made APIs, plug-and-play modules, and enterprise-grade security to help businesses launch and scale confidently without rebuilding core infrastructure.",
@@ -19,7 +29,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Everstream Solutions",
     description:
       "Everstream Solutions provides comprehensive property care and visual media services designed to enhance your property's value and appeal. With our team of professionals, we deliver quality, affordable, and reliability to homeowners and business alike.",
@@ -30,7 +40,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Musais Technology",
     description:
       "A comprehensive digital solutions project delivering web design, product design, pitch decks, MVP development, web engineering, software development, and marketing collateral. From concept to execution, the project provides end-to-end creative and technical solutions designed to help businesses build, launch, and grow their digital presence.",
@@ -41,7 +51,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "EED Fashion Website",
     description:
       "A basic fashion website project created to practice and test my foundational HTML skills. The project focused on building and structuring a functional website layout, including navigation, content sections, images, and styling elements. It served as an opportunity to apply core HTML concepts and gain hands-on experience in creating a real-world website.",
@@ -52,7 +62,7 @@ const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Pinwheel Website",
     description:
       "A website clone built to test and strengthen my front-end development skills using HTML, CSS, and JavaScript. This project focuses on recreating a modern web interface while improving my understanding of layout design, styling, responsiveness, and JavaScript functionality.",
@@ -63,7 +73,7 @@ const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Youtube Clone",
     description:
       "A website clone built to test and strengthen my front-end development skills using HTML, CSS, and JavaScript. This project focuses on recreating a modern web interface while improving my understanding of layout design, styling, responsiveness, and JavaScript functionality.",
@@ -73,15 +83,6 @@ const projects = [
     githubUrl: "https://github.com/codalee123/Youtube-clone",
   },
 
-  {
-    id: 7,
-    title: "Oyinjewelries",
-    description:
-      "Oyinsjewelries is a responsive jewelry e-commerce website built with React, Tailwind CSS, and Vite. It allows customers to browse jewelry collections, filter products by category, manage their shopping cart, and place orders directly through WhatsApp.",
-    image:OyinjewelryImage,
-    technologies: ["React", "Tailwind CSS", "vite"],
-    liveUrl: "https://oyinsjewelries.vercel.app/",
-  },
 ];
 
 export default projects;
